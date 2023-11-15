@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_analitico" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5b2a6040-a6a4-4a34-b565-9c35db92b8a9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="materia" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="nota1" class="java.lang.Double"/>
+	<field name="nota2" class="java.lang.Double"/>
+	<field name="nota3" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="30" width="160" height="30" uuid="1dd1f5ea-2d71-43bc-99e4-4212619f0c5a"/>
+				<text><![CDATA[Desempenho nas Avaliações]]></text>
+			</staticText>
+			<image>
+				<reportElement x="60" y="5" width="50" height="50" uuid="d7c0c712-b008-4c6a-814b-8c543c15eb83"/>
+				<imageExpression><![CDATA["c.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="164" y="19" width="100" height="30" uuid="114974ef-494e-4df6-9c68-49fd90793d9b"/>
+				<textFieldExpression><![CDATA[$P{materia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="53" y="28" width="467" height="30" uuid="430c48bc-f1ba-46d0-8600-6bf189d4c9b6"/>
+				<textFieldExpression><![CDATA[$F{nome}+" "+$F{nota1}+" "+$F{nota2}+" "+$F{nota3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
